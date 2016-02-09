@@ -1,3 +1,440 @@
 @mainColor: blue;
 
 @import "pizza/pizza-card";
+
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+
+  background-image: url("fWzWwZIXcGI.jpg");
+}
+
+div {
+  display: block;
+}
+
+
+
+///
+
+
+
+
+
+
+.top-panel {
+  background: rgba(1, 6, 2, 0.80);
+  z-index: 10;
+}
+.top-panel {
+  padding-left: 130px;
+  padding-right: 350px;
+}
+.navbar-fixed-bottom, .navbar-fixed-top, .navbar-static-top {
+  border-radius: 0;
+}
+.navbar-fixed-top {
+  top: 0;
+  border-width: 0 0 1px;
+}
+
+.navbar-fixed-bottom, .navbar-fixed-top {
+  border-radius: 0;
+}
+.navbar-fixed-bottom, .navbar-fixed-top {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+.navbar {
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+}
+
+///
+
+.top-panel .site-icon {
+  position: fixed;
+  top: 0;
+  background: #065315;
+  z-index: 99;
+  width: 100px;
+  height: 90px;
+  font-size: 19px;
+  padding: 10px;
+  padding-top: 15px;
+  color: #fff;
+
+  left: 9px;
+  border-left: 1px solid #065315;
+  border-right: 1px solid #065315;
+}
+
+.discount-before {
+  width: 100px;
+  height: 11px;
+  top: -11px;
+  left: -1px;
+  background-image: url(../images/discount.svg);
+  background-size: 100px 11px;
+  background-repeat: no-repeat;
+  padding: 0!important;
+  margin: 0!important;
+  position: absolute;
+}
+
+.top-panel .top-discount {
+  top: 90px;
+  -moz-transform: scaleY(-1);
+  -o-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+  filter: FlipV;
+  -ms-filter: "FlipV";
+}
+
+.top-panel .pizza-logo {
+  color: #fff!important;
+}
+
+.top-panel .header-top-row {
+  width: 100%;
+  font-size: 12px;
+  line-height: 11px;
+  margin: 0;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid;
+  color: #a1a1a1;
+}
+
+.top-panel .header-top-row .phone-number {
+  font-size: 20px;
+  padding-right: 30px;
+  padding-bottom: 15px;
+}
+
+.top-panel .header-top-row .work-days {
+  font-size: 12px;
+  padding-right: 30px;
+}
+
+.top-panel .header-top-row .delivery {
+  font-size: 16px;
+  padding-right: 30px;
+}
+
+.top-panel .sign-in-button {
+  float: right;
+  margin-top: -11px;
+  background-color: #065315;
+  border-color: #065315;
+}
+
+.top-panel .header-down-row {
+  display: block!important;
+  padding-bottom: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.main-container {
+  background-color: #fffff5;
+  padding-top: 80px;
+}
+.main-container, body {
+  min-width: 594px!important;
+}
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.left-panel {
+  margin: auto;
+  padding-left: 30px;
+  padding-right: 360px;
+  max-width: 1354px;
+}
+
+.btn-circle,.discount-panel,.footer,
+.left-panel .all-pizza-type-wrap,
+.left-panel .page-title, .pizza-card
+.pizza-big, .pizza-card .pizza-small,
+.top-panel .site-icon {
+  text-align: center;
+}
+
+.left-panel .page-title .orange {
+  background-color: #065315 !important;
+}
+.badge {
+  display: inline-block;
+  min-width: 10px;
+  padding: 3px 7px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  background-color: #777;
+  border-radius: 10px;
+}
+
+.left-panel .all-pizza-type-wrap .all-pizza-type {
+  display: inline-block;
+}
+.nav {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+ol, ul {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.nav-pills>li {
+  float: left;
+}
+
+.nav>li {
+  position: relative;
+  display: block;
+}
+
+.left-panel .all-pizza-type-wrap .all-pizza-type .active a, .left-panel .all-pizza-type-wrap .all-pizza-type .active a:hover {
+  background-color: #065315;
+  color: #fff;
+}
+
+.left-panel .all-pizza-type-wrap .nav-pills a {
+  color: #065315;
+}
+
+.nav-pills>li+li {
+  margin-left: 2px;
+}
+
+.pizza-card {
+  position: relative;
+  padding-top: 30px;
+}
+.img-thumbnail, .thumbnail {
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.075);
+  box-shadow: 0 1px 2px rgba(0,0,0,.075);
+}
+.thumbnail {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: border .2s ease-in-out;
+  -o-transition: border .2s ease-in-out;
+  transition: border .2s ease-in-out;
+}
+
+.pizza-card .pizza-label-new, .pizza-card .pizza-label-popular {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.h3, h3 {
+  font-size: 24px;
+}
+.h1, .h2, .h3, h1, h2, h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+.thumbnail .caption {
+  padding: 9px;
+  color: #333;
+}
+
+.pizza-card .title {
+  font-size: 30px;
+  color: #065315;
+  font-weight: 700;
+  font-family: "Helvetica Neue";
+}
+.pizza-card .type {
+  font-size: 12px;
+  color: #a3a0a0;
+}
+.pizza-card .description {
+  font-size: 14px;
+  height: 65px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.right-panel {
+  position: fixed!important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 35px;
+  margin-left: 20px;
+  padding-right: 0!important;
+  padding-left: 0!important;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: box;
+  -moz-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  box-orient: vertical;
+  flex-direction: column;
+  min-width: 330px;
+  width: 330px;
+  height: 100%;
+  background: #fff;
+  box-shadow: rgba(0,0,0,.2) -3px 3px 10px;
+  z-index: 1000;
+}
+.right-panel .r1 {
+  padding-bottom: 13px;
+}
+
+.r1, .r2, .r3, .right-panel .order-state {
+  width: 100%;
+  box-sizing: content-box;
+  display: block!important;
+}
+.right-panel .order-list-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 17px;
+  padding-left: 15px;
+}
+.right-panel .clear-order {
+  float: right;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.right-panel .clear-order-wrap {
+  padding-right: 15px;
+  font-size: 10px;
+  line-height: 11px;
+  font-weight: 400;
+  color: rgba(0,0,0,.5);
+}
+.r2 {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  height: 100%;
+}
+
+.r1, .r2, .r3, .right-panel .order-state {
+  width: 100%;
+  box-sizing: content-box;
+  display: block!important;
+}
+.all-orders {
+  margin-top: 15px;
+  background-color: #F5F5F5;
+  height: 100%;
+}
+.all-orders, .r2 {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.right-panel .all-orders .no-order-text {
+  font-size: 16px;
+  color: #4e4e4e;
+  text-align: center;
+  padding-top: 50px;
+}
+.right-panel .order-state {
+  padding: 10px;
+  border-top: 1px solid rgba(0,0,0,.1);
+}
+.right-panel .order-state .sum-title {
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+.right-panel .order-state .sum-number {
+  font-weight: 700;
+  font-size: 20px;
+  float: right;
+  padding-right: 30px;
+  margin-bottom: 15px;
+}
+.right-panel .order-state .do-order-button {
+  padding: 20px;
+  padding-right: 40px;
+}
+.right-panel .order-list-title .orange {
+  background-color: #065315!important;
+}
+
+.footer {
+  padding: 40px 0;
+  color: grey;
+  background-color: #fff;
+  border-top: 1px solid #e5e5e5;
+}
+
+.footer {
+  padding-right: 330px!important;
+}
+
+
+
+.discount-panel, .top-panel .site-icon {
+  left: 9px;
+  border-left: 1px solid #065315;
+  border-right: 1px solid #065315;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.discount-panel, .pizza-card .description::first-letter, .top-panel .site-icon {
+  text-transform: uppercase;
+}
+
+.discount-panel {
+  position: fixed;
+  bottom: 0;
+  background: #065315;
+  z-index: 99;
+  width: 100px;
+  padding: 10px;
+  color: #fff;
+
+}
+
+.btn-warning {
+  color: #fff;
+  background-color: #065315;
+  border-color: #065315;
+}
