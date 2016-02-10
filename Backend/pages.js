@@ -8,7 +8,7 @@ exports.mainPage = function(req, res) {
 };
 
 exports.orderPage = function(req, res) {
-    res.render('mainPage', {
+    res.render('orderPage', {
         pageTitle: 'Pizza'
     });
 };
