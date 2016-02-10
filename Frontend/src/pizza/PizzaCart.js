@@ -2,7 +2,7 @@
  * Created by chaika on 02.02.16.
  */
 var Templates = require('../Templates');
-var Storage=require('.../Storage');
+var Storage=require('../Storage');
 
 //Перелік розмірів піци
 var PizzaSize = {

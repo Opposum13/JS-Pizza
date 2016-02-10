@@ -8,8 +8,18 @@ $(function(){
     var PizzaCart = require('./pizza/PizzaCart');
     var Pizza_List = require('./Pizza_List');
 
-    PizzaCart.initialiseCart();
-    PizzaMenu.initialiseMenu();
+    var API = require("./API");
+    API.getPizzaList(function(err, pizza_list){
+        if(err){
+            return console.error(err);
+        }
+
+        console.log("Pizza_List",pizza_list);
+        PizzaCart.initialiseCart();
+        PizzaMenu.initialiseMenu(pizza_list);
+    });
+
+
 
 
 });
