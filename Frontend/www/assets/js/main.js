@@ -41,6 +41,24 @@ exports.createOrder = function(order_info, callback) {
 };
 },{}],2:[function(require,module,exports){
 /**
+ * Created by Student on 17.02.2016.
+ */
+function initialize() {
+    //Тут починаємо працювати з картою
+    var mapProp = {
+        center: new google.maps.LatLng(50.464379, 30.519131), zoom: 11
+    };
+    var html_element = document.getElementById("googleMap");
+    var map = new google.maps.Map(html_element, mapProp);
+    //Карта створена і показана
+    }
+
+//Коли сторінка завантажилась
+google.maps.event.addDomListener(window, 'load', initialize);
+
+
+},{}],3:[function(require,module,exports){
+/**
  * Created by diana on 12.01.16.
  */
 
@@ -217,7 +235,7 @@ var pizza_info = [
 ];
 
 module.exports = pizza_info;
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 /**
  * Created by Student on 03.02.2016.
  */
@@ -229,7 +247,7 @@ exports.get =	function(key)	{
 exports.set =	function(key,	value)	{
     return	basil.set(key,	value);
 };
-},{"basil.js":8}],4:[function(require,module,exports){
+},{"basil.js":9}],5:[function(require,module,exports){
 /**
  * Created by chaika on 02.02.16.
  */
@@ -241,7 +259,7 @@ exports.PizzaMenu_OneItem = ejs.compile("<%\n\nfunction getIngredientsArray(pizz
 
 exports.PizzaCart_OneItem = ejs.compile("<div>\n    <%= pizza.title %> (<%= size %>)\n    <div>Ціна: <%= pizza[size].price %> грн.</div>\n    <div>\n        <button class=\"btn btn-danger minus\">-</button>\n        <span class=\"label label-default\"><%= quantity %></span>\n        <button class=\"btn btn-success plus\">+</button>\n    </div>\n</div>");
 
-},{"ejs":9}],5:[function(require,module,exports){
+},{"ejs":10}],6:[function(require,module,exports){
 /**
  * Created by chaika on 25.01.16.
  */
@@ -264,10 +282,10 @@ $(function(){
     });
 
 
-
+require('./GoogleMap');
 
 });
-},{"./API":1,"./Pizza_List":2,"./pizza/PizzaCart":6,"./pizza/PizzaMenu":7}],6:[function(require,module,exports){
+},{"./API":1,"./GoogleMap":2,"./Pizza_List":3,"./pizza/PizzaCart":7,"./pizza/PizzaMenu":8}],7:[function(require,module,exports){
 /**
  * Created by chaika on 02.02.16.
  */
@@ -364,7 +382,7 @@ exports.getPizzaInCart = getPizzaInCart;
 exports.initialiseCart = initialiseCart;
 
 exports.PizzaSize = PizzaSize;
-},{"../Storage":3,"../Templates":4}],7:[function(require,module,exports){
+},{"../Storage":4,"../Templates":5}],8:[function(require,module,exports){
 /**
  * Created by chaika on 02.02.16.
  */
@@ -420,7 +438,7 @@ function initialiseMenu() {
 
 exports.filterPizza = filterPizza;
 exports.initialiseMenu = initialiseMenu;
-},{"../Pizza_List":2,"../Templates":4,"./PizzaCart":6}],8:[function(require,module,exports){
+},{"../Pizza_List":3,"../Templates":5,"./PizzaCart":7}],9:[function(require,module,exports){
 (function () {
 	// Basil
 	var Basil = function (options) {
@@ -789,7 +807,7 @@ exports.initialiseMenu = initialiseMenu;
 
 })();
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 /*
  * EJS Embedded JavaScript templates
  * Copyright 2112 Matthew Eernisse (mde@fleegix.org)
@@ -1540,7 +1558,7 @@ if (typeof window != 'undefined') {
   window.ejs = exports;
 }
 
-},{"../package.json":11,"./utils":10,"fs":12,"path":13}],10:[function(require,module,exports){
+},{"../package.json":12,"./utils":11,"fs":13,"path":14}],11:[function(require,module,exports){
 /*
  * EJS Embedded JavaScript templates
  * Copyright 2112 Matthew Eernisse (mde@fleegix.org)
@@ -1683,7 +1701,7 @@ exports.cache = {
 };
 
 
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 module.exports={
   "name": "ejs",
   "description": "Embedded JavaScript templates",
@@ -1762,9 +1780,9 @@ module.exports={
   "directories": {}
 }
 
-},{}],12:[function(require,module,exports){
-
 },{}],13:[function(require,module,exports){
+
+},{}],14:[function(require,module,exports){
 (function (process){
 // Copyright Joyent, Inc. and other Node contributors.
 //
@@ -1992,7 +2010,7 @@ var substr = 'ab'.substr(-1) === 'b'
 ;
 
 }).call(this,require('_process'))
-},{"_process":14}],14:[function(require,module,exports){
+},{"_process":15}],15:[function(require,module,exports){
 // shim for using process in browser
 
 var process = module.exports = {};
@@ -2085,4 +2103,4 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}]},{},[5]);
+},{}]},{},[6]);

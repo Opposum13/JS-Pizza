@@ -20,6 +20,6 @@ $(function(){
     });
 
 
-
+require('./GoogleMap');
 
 });
