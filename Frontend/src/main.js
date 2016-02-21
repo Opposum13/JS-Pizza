@@ -19,6 +19,22 @@ $(function(){
         PizzaMenu.initialiseMenu(pizza_list);
     });
 
+    $(".order-button").click(function(){
+        API.createOrder({
+            name: "Name",
+            phone: "Phone",
+            pizza: PizzaCart.getPizzaInCart()
+        }, function(err, result){
+            if(err) {
+                alert("Can't create order");
+            } else {
+                window.location = "/order.html";
+                //alert("Order created");
+            }
+        });
+
+
+    });
 
 require('./GoogleMap');
 
