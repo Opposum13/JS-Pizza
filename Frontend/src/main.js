@@ -28,7 +28,9 @@ $(function(){
             if(err) {
                 alert("Can't create order");
             } else {
+                // это как раз перенаправляет на страничку заказа, просто создать такой потом файл и убедишься
                 window.location = "/order.html";
+                //удалять хтмл файлики не нужно
                 //alert("Order created");
             }
         });

@@ -30,7 +30,7 @@ function showPizzaList(list) {
 
     list.forEach(showOnePizza);
 }
-
+//https://github.com/MissFortuna/JS-Pizza/blob/master/Frontend/src/pizza/PizzaMenu.js
 function filterPizza(filter) {
     //Масив куди потраплять піци які треба показати
     var pizza_shown = [];
