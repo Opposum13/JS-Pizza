@@ -1,7 +1,58 @@
 <% include common/header.ejs %>
 
-<div class="">
-   Here add your page with pizza main page
+<div class="main-container  container-fluid">
+<div class="row">
+<div class="left-panel">
+<div class="page-title">
+    <h2>
+        <span class="count-tile">Усі піци</span>
+        <span class="badge orange pizza-count">4</span>
+    </h2>
+</div>
+<div class="all-pizza-type-wrap">
+    <ul class="nav nav-pills all-pizza-type">
+        <li role="presentation" class="active pizza-filter-button" id="filter-button-all-pizza">
+            <a href="#">
+                Усі
+            </a>
+        </li>
+        <li role="presentation" class="pizza-filter-button" id="filter-button-meat">
+            <a href="#">
+                Мясні
+            </a>
+        </li>
+        <li role="presentation" class="pizza-filter-button" id="filter-button-pineapples">
+            <a href="#">
+                З ананасами
+            </a>
+        </li>
+        <li role="presentation" class="pizza-filter-button" id="filter-button-mushrooms">
+            <a href="#">
+                З грибами
+            </a>
+        </li>
+        <li role="presentation" class="pizza-filter-button" id="filter-button-ocean">
+            <a href="#">
+                З морепродуктами
+            </a>
+        </li>
+        <li role="presentation" class="pizza-filter-button" id="filter-button-tomato">
+            <a href="#">
+                Вега
+            </a>
+        </li>
+    </ul>
+</div>
+
+<div class="row pizza-list">
+
+</div>
+
+<% include common/rightPanel.ejs %>
+
+
+</div>
+</div>
 </div>
 
 <% include common/footer.ejs %>
