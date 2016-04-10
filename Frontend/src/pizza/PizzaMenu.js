@@ -1,6 +1,6 @@
-/**
- * Created by chaika on 02.02.16.
- */
+
+
+
 var Templates = require('../Templates');
 var PizzaCart = require('./PizzaCart');
 var Pizza_List = require('../Pizza_List');
