@@ -1,6 +1,5 @@
-/**
- * Created by chaika on 02.02.16.
- */
+
+
 var Templates = require('../Templates');
 var Storage=require('../Storage');
 
@@ -32,8 +31,13 @@ function addToCart(pizza, size) {
 
 function removeFromCart(cart_item) {
     //Видалити піцу з кошика
-    //TODO: треба зробити
+    var html_code = Templates.PizzaCart_OneItem(cart_item);
 
+    var $node = $(html_code);
+    $node.find(".count-clear").click(function(){
+        $node.remove();
+    });
+    Cart.splice(Cart.indexOf(cart_item), 1);
     //Після видалення оновити відображення
     updateCart();
 }

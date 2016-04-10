@@ -19,7 +19,9 @@ $(function(){
         PizzaMenu.initialiseMenu(pizza_list);
     });
 
-    $(".order-button").click(function(){
+    $(".button-order").click(function(){
+        window.location = "/order.html";
+        $(this).hide();
         API.createOrder({
             name: "Name",
             phone: "Phone",
