@@ -9,6 +9,7 @@ var Pizza_List = require('../Pizza_List');
 var $pizza_list = $("#pizza_list");
 var $pizza_count = $("#pizza-count");
 var $title_count = $("#count-title");
+var $butt = $(".button-order");
 
 
 function showPizzaList(list) {
@@ -22,11 +23,13 @@ function showPizzaList(list) {
 
         var $node = $(html_code);
 
-        $node.find(".buy-big").click(function(){
+        $node.find(".buy-button-big").click(function(){
             PizzaCart.addToCart(pizza, PizzaCart.PizzaSize.Big);
+
         });
-        $node.find(".buy-small").click(function(){
+        $node.find(".buy-button-small").click(function(){
             PizzaCart.addToCart(pizza, PizzaCart.PizzaSize.Small);
+
         });
 
         $pizza_list.append($node);
